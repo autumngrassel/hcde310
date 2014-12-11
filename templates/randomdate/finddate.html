@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Date</title>
+	<link rel="stylesheet" type="text/css" href="http://students.washington.edu/grassela/css/pure-min.css">
+
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/css/forms-min.css">
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/hcde310/mycss.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"/>
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/hcde310/kalendae/kalendae.css" type="text/css" charset="utf-8">
+<!-- <script src="http://students.washington.edu/grassela/hcde310/kalendae/moment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://students.washington.edu/grassela/hcde310/kalendae/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="http://students.washington.edu/grassela/hcde310/kalendae/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background:red;
+		}
+	</style>
+	<!--[if lte IE 8]>
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+          
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+          
+        <!--<![endif]-->
+
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing.css">
+        <!--<![endif]-->  
+
+
+</head>
+
+<body>
+	<div class="header">
+        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="home.html">Random Date</a>
+
+            <ul>
+                <li class="pure-menu-selected"><a href="home.html">Home</a></li>
+                <li><a href="finddate">Find a Date</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="maincontent">
+    	
+		<div id="finddatewelcome" class="pure-g">
+			<div class="pure-u-1-5"></div>
+			
+			<div class="pure-u-4-5">
+				<h1>Welcome  to Random Date!</h1>
+
+				<form class='pure-form pure-form-aligned' id='selectdateform' action='/viewresults' method="post">
+				{% csrf_token %}
+					<fieldset>
+
+						<div class="pure-control-group">
+							{{ form.date.errors }}
+							<label for="id_date">Select a Day:</label> 
+							{{ form.date }}
+							<script type="text/javascript" charset="utf-8">
+								var k4 = new Kalendae.Input('id_date', {
+								months:1
+								});												
+							</script>
+						</div>
+						<div class="pure-control-group">
+							<label for="id_cuisine">Restaurant Type:</label>
+					        {{ form.cuisine }}
+					    </div>
+					    <div class="pure-control-group">
+							<label for="id_category">Event Type:</label>
+					        {{ form.category }}
+					    </div>
+					    
+
+					    <div class="pure-controls">
+							<button class="pure-button pure-button-primary" type="submit">View Ideas</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="content-wrapper">
+        <div class="footer l-box is-center">
+            Created as a final project for HCDE 310
+        </div>
+    </div>	
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Date</title>
+	<link rel="stylesheet" type="text/css" href="http://students.washington.edu/grassela/css/pure-min.css">
+	<script src="jquery-1.6.2.min.js"></script>
+	<script src="jquery-ui-1.8.15.custom.min.js"></script>
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/css/forms-min.css">
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/hcde310/mycss.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"/>
+	<link rel="stylesheet" href="kalendae/kalendae.css" type="text/css" charset="utf-8">
+<!-- <script src="kalendae/moment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="kalendae/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="http://students.washington.edu/grassela/hcde310/kalendae/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background:red;
+		}
+	</style>
+	<!--[if lte IE 8]>
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+          
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+          
+        <!--<![endif]-->
+
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing.css">
+        <!--<![endif]-->  
+
+
+</head>
+
+<body>
+	<div class="header">
+        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="home.html">Random Date</a>
+
+            <ul>
+                <li class="pure-menu-selected"><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="maincontent">
+	    <div id="heading">
+			<h1>Welcome  to Random Date!</h1>
+		</div>
+		
+		<div id="main">
+			<form class='pure-form pure-form-aligned' action='example.py' method="post">
+				<!-- <label for="choosedate">Please select what date you would like to see options for:</label>
+				<input id="choosedate" placeholder="MM/DD/YYYY"/>  -->
+				<fieldset>
+					<div class="pure-control-group">
+						<label for="date">Select a Day:</label> 
+						<input type="text" placeholder="MM/DD/YYYY" class="auto-kal" data-kal="direction: 'future'" id="date" name="date">
+						<script type="text/javascript" charset="utf-8">
+							var k4 = new Kalendae.Input('date', {
+							months:1
+							});												
+						</script>
+					</div>
+					<div class="pure-control-group">
+						<label for="category">Type of Event:</label>
+				        <select id="category" name="category">
+				            <option>Concerts</option>
+				            <option>CA</option>
+				            <option>IL</option>
+				        </select>
+				    </div>
+				    <div class="pure-controls">
+						<button class="pure-button pure-button-primary" type="submit">View Ideas</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+		
+</body>
+</html>

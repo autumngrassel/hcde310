@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Date</title>
+	<link rel="stylesheet" type="text/css" href="http://students.washington.edu/grassela/css/pure-min.css">
+	<script src="jquery-1.6.2.min.js"></script>
+	<script src="jquery-ui-1.8.15.custom.min.js"></script>
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/css/forms-min.css">
+	<link rel="stylesheet" href="http://students.washington.edu/grassela/hcde310/mycss.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"/>
+	<link rel="stylesheet" href="kalendae/kalendae.css" type="text/css" charset="utf-8">
+<!-- <script src="kalendae/moment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="kalendae/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="http://students.washington.edu/grassela/hcde310/kalendae/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background:red;
+		}
+	</style>
+	<!--[if lte IE 8]>
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+          
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+          
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+          
+        <!--<![endif]-->
+
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="http://students.washington.edu/grassela/css/marketing.css">
+        <!--<![endif]-->  
+
+
+</head>
+
+<body>
+	<div class="header">
+        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="home.html">Random Date</a>
+
+            <ul>
+                <li class="pure-menu-selected"><a href="home.html">Home</a></li>
+                <li><a href="finddate">Find a Date</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="maincontent">
+	    <div id="heading">
+			<h1 id="datesuggest">Your Date Suggestions:</h1>
+
+
+		</div>
+		
+
+		<div class="pure-g">
+			<div class="pure-u-1-24"></div>
+			<div class="pure-u-2-5">
+				{{ restaurantHTML|safe }}
+			</div>
+			<div class="pure-u-1-24"></div>
+			<div class="pure-u-2-5">
+				{{ eventHTML|safe }}
+			</div>
+		</div>
+
+		
+
+		<p id="button">
+			<a href="/finddate"><button class="pure-button pure-button-primary">Find a Different Date</button></a>
+		</p>
+
+	</div>
+		<div class="content-wrapper" style="position=relative">
+
+        <div class="footer l-box is-center">
+            Created as a final project for HCDE 310
+        </div>
+        </div>
+
+</body>
+</html>
